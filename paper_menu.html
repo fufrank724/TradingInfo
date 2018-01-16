@@ -1,0 +1,323 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/main.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <title>專案研究</title>
+      <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+      <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript" language="javascript">
+        function videochange(id) {
+          document.getElementById("player").innerHTML = videopanel(id);   
+        }
+
+        function videopanel(id) {
+        
+           str = '<iframe width="100%" height="350" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>';
+           return str;        
+        }
+        var x=document.getElementById("demo");
+        function getLocation()
+          {
+          if (navigator.geolocation)
+            {
+            navigator.geolocation.getCurrentPosition(showPosition);
+            }
+          else{x.innerHTML="Geolocation is not supported by this browser.";}
+          }
+        function showPosition(position)
+          {
+          x.innerHTML="Latitude: " + position.coords.latitude +
+          "<br />Longitude: " + position.coords.longitude;
+          }         
+
+        </script>
+     <style>
+         #slider {
+           width: 100%; position: relative; 
+
+         }
+        .modal.open{
+            width: 60%;
+            max-height: 97%;
+            height: 97%;
+
+        }
+        .container {
+          margin: 0 auto;
+          max-width: 80%;
+          width: 80%;
+        }
+        main{
+        font-family: "Microsoft JhengHei", sans serif;
+        padding-left: 0px;
+        }
+
+    </style>
+     
+     <script>
+       $(document).ready(function(){
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal({
+                  dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                  startingTop: '100%', // Starting top style attribute
+                  endingTop: '1%', // Ending top style attribute  
+
+                });
+          });
+     </script>
+    <main>
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="mql5_menu.html">MQL5 教學</a></li>
+          <li><a href="ml_menu.html">機器學習演算法</a></li>
+          <li><a href="">專案研究</a></li>
+        </ul>
+        <div class="navbar-fixed">
+        <nav class = "orange accent-3">
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center">Paper Research</a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="index.html">首頁</a></li>
+              <li><a href="#auther">關於作者</a></li>
+              <!-- Dropdown Trigger -->
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">DashBoard<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+          <script>         
+            $('.dropdown-button').dropdown({
+              inDuration: 300,
+              outDuration: 225,
+              constrainWidth: true, // Does not change width of dropdown to that of the activator
+              hover: true, // Activate on hover
+              gutter: 0, // Spacing from edge
+              belowOrigin: true, // Displays dropdown below the button
+              alignment: 'left', // Displays dropdown with edge aligned to the left of button
+              stopPropagation: true // Stops event propagation
+            }
+          );
+          </script>
+        </nav>
+        </div>
+
+
+        <script>$('.carousel.carousel-slider').carousel({fullWidth: true});
+                $(document).ready(function(){$('.slider').slider();});</script>
+          <div id ="slider" class="slider">
+            
+             <ul class="slides">               
+
+               <li>
+                 <img src="img/research-papers.jpg"> <!-- random image -->
+                 <div class="caption left-align">
+                   <h3></h3>
+                   <!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+                   
+                 </div>
+                 
+               </li>
+
+
+             </ul>
+             
+         </div>
+
+           <!-----------------cards----------------->
+           <div class="section white">
+             <div class="row container">
+                  <!-----------------card1----------------->
+                  
+                  
+                  <div class="col s12 m4">
+                  
+                  <h4 class="center-align"> 近期論文研讀 </h4>
+                      <div class="divider"></div>
+                      <div class="card hoverable"><a href="#modal1">
+                        <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="img/ieee3.jpg">
+                        </div>
+                        <div class="card-content center-align">
+                          <span class="card-title activator grey-text text-darken-4">Paper Study</span>
+                        </div></a>
+                      </div>
+                       <ul class="collapsible " data-collapsible="accordion">
+                            <li>
+                              <div class="collapsible-header" ><i class="material-icons">laptop_chromebook</i>Q-Learning 於台指期上的交易應用</div>
+                              <div class="collapsible-body"><p>
+                                原文：使用增強式學習法建立臺灣股價指數期貨當沖交易策略<br/>
+                                作者：賴怡玲<br/>
+                                指導教授：國立台灣大學呂育道博士
+                                發表日期：2009<br/>
+                                筆者將以DQN的方式進行試驗。
+                                <button class="btn-flat waves-effect waves-light right"  name="action">前去了解
+                                    <i class="material-icons right">send</i>
+                              </p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">class</i>遞迴強化學習演算法進行外匯交易</div>
+                              <div class="collapsible-body"><p>
+                                原文：FX trading via recurrent reinforcement learning<br/>
+                                作者：C. Gold<br/>
+                                發表日期：29 April 2003
+                                <button class="btn-flat waves-effect waves-light right" name="action">前去了解
+                                    <i class="material-icons right">send</i>
+                              </p></div>                              
+                            </li>
+                        </ul>
+                  </div>
+                  <!-----------------card2----------------->
+                  
+                  <div class="col s12 m4">
+                  
+                  <h4 class="center-align" > Github專案研究 </h4>
+                  <div class="divider"></div>
+                  <div class="card hoverable"><a href="#modal2">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="img/github.png">
+                    </div>
+                    <div class="card-content center-align">
+                      <span class="card-title activator grey-text text-darken-4">Projects on Github Research</span>
+                    </div>
+
+                  </a>
+                  </div>
+                   <ul class="collapsible " data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>Flappy Bird via DQN</div>
+                          <div class="collapsible-body">
+                            <p>建立一個會玩Flappy Bird的 Q-Agent</p>
+                          </div>
+                        </li>
+
+                    </ul>
+                  </div>  
+
+                  <!-----------------card3----------------->
+                  
+                  <div class="col s12 m4">
+                  
+                  <h4 class="center-align"> Kaggle 專案研究</h4>
+                  <div class="divider"></div>
+                  <div class="card hoverable"><a href="#modal3">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="img/Kaggle.png">
+                    </div>
+                    <div class="card-content center-align">
+                      <span class="card-title activator grey-text text-darken-4">Projects on Kaggle Research</span>
+                    </div>
+
+                  </a>
+                  </div>
+
+                   <ul class="collapsible " data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>Linear Regression</div>
+                          <div class="collapsible-body">
+                            <p>線性迴歸</p>
+                            </button>
+                          </div>
+                        </li>
+                        
+                    </ul>
+                  </div>
+             </div>
+           </div>
+    
+        <div id="modal1" class="modal">
+          <div class="modal-content ">
+            <h3 class="center-align">近期論文研讀</h3>
+            <p class="center-align"><img src="img/ieee3.jpg" width="80%" height="80%" ></p>
+            <p class = "flow-text center">
+            近期的國內外論文研讀紀錄<br/>
+            將專注於機器學習於金融交易上的研究。
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">確定</a>
+          </div>
+        </div>
+        
+        <div id="modal2" class="modal">
+          <div class="modal-content ">
+            <h3 class="center-align">Github 專案研究</h3>
+            <p class="center-align"><img src="img/Github.png" width="70%" height="80%" >
+            <p class = "flow-text center">
+            筆者近期研究以及的Github 專案<br/>   
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">確定</a>
+          </div>
+        </div>
+        
+        <div id="modal3" class="modal">
+          <div class="modal-content ">
+            <h3 class="center-align">Kaggle 專案研究</h3>
+            <p class="center-align"><img src="img/Kaggle.png" width="50%" height="50%" ></p>
+            <p class = "flow-text center">
+            筆者近期研究的Kaggle 專案<br/>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">確定</a>
+          </div>
+        </div>      
+    </main>
+    
+
+    <footer class = "page-footer" id = "auther">
+     <div class = "row">
+     
+        <div class = "col s12 m6 l6">
+            <h5 class = "white-text">關於作者</h5>
+            <span><p>作者就讀資工系，目前鑽研程式交易。<br/>               
+            除了常見的條件式演算法交易外，作者也會在開發策略之餘研發一些特別的演算法交易，例如機器學習演算法、運用演算法進行策略管理等。</p></span>
+
+            
+            <span><p>
+            若想交流歡迎私訊粉專或是在文章下面留言，希望大家都能透過本站學到新的知識。
+            </p></span>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2FAlgoTradingInfo%2Fabout%2F%3Fref%3Dpage_internal&tabs=timeline&width=340&height=162&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="340" height="162" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+        <div class = "col s12 m6 l6">
+           <h5 class = "white-text">外匯保證金帳戶損益</h5>
+        <a href="https://www.myfxbook.com/statements/2377069/statement.html"><img  border="0" src="https://widgets.myfxbook.com/widgets/2377069/medium.jpg"/></a>
+        
+        </div>
+        
+
+
+     </div>
+     
+     <div class = "footer-copyright">
+        <div class = "container">
+           © 2016 Copyright Information
+
+        </div>
+     </div>
+    </footer>
+                 
+                 
+
+
+    </body>
+
+  </html>

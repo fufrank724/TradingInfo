@@ -1,0 +1,384 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/main.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <title>機器學習演算法</title>
+      <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+      <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript" language="javascript">
+        function videochange(id) {
+          document.getElementById("player").innerHTML = videopanel(id);   
+        }
+
+        function videopanel(id) {
+        
+           str = '<iframe width="100%" height="350" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>';
+           return str;        
+        }
+        var x=document.getElementById("demo");
+        function getLocation()
+          {
+          if (navigator.geolocation)
+            {
+            navigator.geolocation.getCurrentPosition(showPosition);
+            }
+          else{x.innerHTML="Geolocation is not supported by this browser.";}
+          }
+        function showPosition(position)
+          {
+          x.innerHTML="Latitude: " + position.coords.latitude +
+          "<br />Longitude: " + position.coords.longitude;
+          }         
+
+        </script>
+     <style>
+         #slider {
+           width: 100%; position: relative; 
+
+         }
+        .modal.open{
+            width: 60%;
+            max-height: 97%;
+            height: 97%;
+
+        }
+        .container {
+          margin: 0 auto;
+          max-width: 80%;
+          width: 80%;
+        }
+        main{
+        font-family: "Microsoft JhengHei", sans serif;
+        padding-left: 0px;
+        }
+
+    </style>
+     
+     <script>
+       $(document).ready(function(){
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal({
+                  dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                  startingTop: '100%', // Starting top style attribute
+                  endingTop: '1%', // Ending top style attribute  
+
+                });
+          });
+     </script>
+    <main>
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="mql5_menu.html">MQL5 教學</a></li>
+          <li><a href="">機器學習演算法</a></li>
+          <li><a href="paper_menu">專案研究</a></li>
+        </ul>
+        <div class="navbar-fixed">
+        <nav class = "blue lighten-1">
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center">Machin Learning Algorithm</a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="index.html">首頁</a></li>
+              <li><a href="#">關於作者</a></li>
+              <!-- Dropdown Trigger -->
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">功能表<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+          <script>         
+            $('.dropdown-button').dropdown({
+              inDuration: 300,
+              outDuration: 225,
+              constrainWidth: true, // Does not change width of dropdown to that of the activator
+              hover: true, // Activate on hover
+              gutter: 0, // Spacing from edge
+              belowOrigin: true, // Displays dropdown below the button
+              alignment: 'left', // Displays dropdown with edge aligned to the left of button
+              stopPropagation: true // Stops event propagation
+            }
+          );
+          </script>
+        </nav>
+        </div>
+
+
+        <script>$('.carousel.carousel-slider').carousel({fullWidth: true});
+                $(document).ready(function(){$('.slider').slider();});</script>
+          <div id ="slider" class="slider">            
+             <ul class="slides">
+               <li>
+                 <img src="img/machine_learning.jpeg"> <!-- random image -->
+                 <div class="caption left-align">
+                   <h3></h3>
+                   <!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+                   
+                 </div>
+                 
+               </li>
+             </ul>
+             
+         </div>
+
+           <!-----------------cards----------------->
+           <div class="section white">
+             <div class="row container">
+                  <!-----------------card1----------------->
+                  
+                  
+                  <div class="col s4">
+                  
+                  <h4 class="center-align"> Instance Base </h4>
+                      <div class="divider"></div>
+                      <div class="card hoverable"><a href="#modal1">
+                        <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="img/clustering-animated.jpg">
+                        </div>
+                        <div class="card-content center-align">
+                          <span class="card-title activator grey-text text-darken-4">Instance Base Algorithm</span>
+                        </div></a>
+                      </div>
+                       <ul class="collapsible " data-collapsible="accordion">
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">laptop_chromebook</i>Distance</div>
+                              <div class="collapsible-body"><p>Instance Base 的計算核心</p></div>
+                              
+                            </li>
+                            <li>
+                              <div class="collapsible-header" ><i class="material-icons">class</i>K-means</div>
+                              <div class="collapsible-body">
+                                    <p>K-means 演算法<br/>
+
+                              </p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">import_contacts</i>Hierarchical Clustering</div>
+                              <div class="collapsible-body">
+                                <p>Hierarchical Clustering</p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">import_contacts</i>K-nearest Neighbor Models</div>
+                              <div class="collapsible-body"><p>K-NN演算法</div>
+                            </li>
+                        </ul>
+                  </div>
+                  <!-----------------card2----------------->
+                  
+                  <div class="col s4">
+                  
+                  <h4 class="center-align" > Information base </h4>
+                  <div class="divider"></div>
+                  <div class="card hoverable"><a href="#modal2">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="img/forest2.jpg">
+                    </div>
+                    <div class="card-content center-align">
+                      <span class="card-title activator grey-text text-darken-4">Information base ML</span>
+                    </div>
+
+                  </a>
+                  </div>
+                   <ul class="collapsible " data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>Entropy</div>
+                          <div class="collapsible-body">
+                            <p>Information Base的基礎─Entropy介紹</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">class</i>Decision Tree</div>
+                          <div class="collapsible-body">
+                            <p>決策樹的運作方式與各種改良</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">import_contacts</i>Random Forest</div>
+                          <div class="collapsible-body">
+                            <p>隨機森林的運作方式</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">build</i>How to improve your decision tree</div>
+                          <div class="collapsible-body">
+                            <p>決策樹的實務與改良</p>
+                          </div>
+                        </li>
+                    </ul>
+                  </div>  
+
+                  <!-----------------card3----------------->
+                  
+                  <div class="col s4">
+                  
+                  <h4 class="center-align"> Error Base </h4>
+                  <div class="divider"></div>
+                  <div class="card hoverable"><a href="#modal3">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="img/NN.png">
+                    </div>
+                    <div class="card-content center-align">
+                      <span class="card-title activator grey-text text-darken-4">Error Base Algorithm</span>
+                    </div>
+
+                  </a>
+                  </div>
+
+                   <ul class="collapsible " data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>Linear Regression</div>
+                          <div class="collapsible-body">
+                            <p>線性迴歸
+                                </br><a class="btn-flat waves-effect waves-light right"  name="btn_basic" href = "ml_linearRegression.html">前去了解
+                                    <i class="material-icons right">send</i></a></p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">class</i>Gradient Descent</div>
+                          <div class="collapsible-body">
+                            <p>線性回歸的權重更新原理以及不同的Gradient Descent</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">class</i>模型的挑選與優化</div>
+                          <div class="collapsible-body">
+                            <p>如何挑選線性回歸的模型並優化</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>Classification</div>                          
+                          <div class="collapsible-body">
+                            <p>本章節包含了Probabilistic Generative Model與Logistic Regression</p>
+
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>Neural Network</div>                          
+                          <div class="collapsible-body">
+                            <p>類神經網路計算原理 
+                            </p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>Why Deep</div>                          
+                          <div class="collapsible-body">
+                            <p>深度神經網路的實作以及注意事項</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>Convolutional Neural Network</div>                          
+                          <div class="collapsible-body">
+                            <p>卷積神經網路的原理與實務</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>Recurrent Neural Network</div>                          
+                          <div class="collapsible-body">
+                            <p>遞迴神經網路的原理與LSTM介紹</p>
+                          </div>
+                        </li>
+                    </ul>
+                  </div>
+             </div>
+           </div>
+    
+        <div id="modal1" class="modal">
+          <div class="modal-content ">
+            <h3 class="center-align">Similarity Base 演算法簡介</h3>
+            <p class="center-align"><img src="img/clustering-animated.jpg" width="50%" height="50%" ></p>
+            <p class = "flow-text">
+            聚類演算法常應用於市場分析、金融、娛樂等領域上，例如電影的推薦系統、客戶分類、市場飽和度分析等等。<br/>
+            常見的演算法有：K-means、Hierarchical Clustering等。<br/>
+            本站將會介紹K-means、Hierarchical Clustering。   
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">確定</a>
+          </div>
+        </div>
+        
+        <div id="modal2" class="modal">
+          <div class="modal-content ">
+            <h3 class="center-align">Information Base 演算法簡介</h3>
+            <p class="center-align"><img src="img/forest2.jpg" width="70%" height="80%" >
+            <p class = "flow-text">
+            聚類演算法常應用於市場分析、金融、娛樂等領域上，<br/>
+            例如電影的推薦系統、客戶分類以及市場飽和度分析。<br/>
+            常見的演算法有：K-means、Hierarchical Clustering等。<br/>
+            本站將會介紹K-means、Hierarchical Clustering。   
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">確定</a>
+          </div>
+        </div>
+        
+        <div id="modal3" class="modal">
+          <div class="modal-content ">
+            <h3 class="center-align">Error Base 演算法簡介</h3>
+            <p class="center-align"><img src="img/NN.png" width="50%" height="50%" ></p>
+            <p class = "flow-text">
+            Error Base的機器學習演算法是近年來相當熱門的領域，<br/>
+            除了應用廣泛的線性迴歸外，類神經網路更是近年來相當受到矚目的演算法之一。<br/>
+            類神經網路的理論最早可追朔至1949年，著名心理學家D. Olding Hebb提出的神經元的數學模型，
+            但由於早期的電腦效能不佳難以計算複雜的類神經網路，因此隨著近年電腦效能跳躍式的提升，
+            除了使相關領域的演算法發展加速外，由於卷積神經網路(CNN)於各領域的應用的突破，
+            使得人們更重視這個領域的演算法發展。<br/> 
+            本系列文章將基於國立台灣大學李宏毅教授的機器學習課程延伸更多內容。
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">確定</a>
+          </div>
+        </div>      
+    </main>
+      <footer class = "page-footer" id = "auther">
+         <div class = "row">
+         
+            <div class = "col s12 m6 l6">
+                <h5 class = "white-text">關於作者</h5>
+                <span><p>作者就讀資工系，目前鑽研程式交易。<br/>               
+                除了常見的條件式演算法交易外，作者也會在開發策略之餘研發一些特別的演算法交易，例如機器學習演算法、運用演算法進行策略管理等。</p></span>
+
+                
+                <span><p>
+                若想交流歡迎私訊粉專或是在文章下面留言，希望大家都能透過本站學到新的知識。
+                </p></span>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2FAlgoTradingInfo%2Fabout%2F%3Fref%3Dpage_internal&tabs=timeline&width=340&height=162&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="340" height="162" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+            <div class = "col s12 m6 l6">
+               <h5 class = "white-text">外匯保證金帳戶損益</h5>
+            <a href="https://www.myfxbook.com/statements/2377069/statement.html"><img  border="0" src="https://widgets.myfxbook.com/widgets/2377069/medium.jpg"/></a>
+            
+            </div>
+
+         </div>
+         
+         <div class = "footer-copyright">
+            <div class = "container">
+               © 2016 Copyright Information
+
+            </div>
+         </div>
+       </footer>
+             
+
+
+    </body>
+
+  </html>

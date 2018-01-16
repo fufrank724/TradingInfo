@@ -1,0 +1,223 @@
+ <!DOCTYPE html>
+	<html>
+
+		<head>
+            <title>機器學習演算法</title>
+            <!--Import Google Icon Font-->
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <!--Import materialize.css-->
+            <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+            <link type="text/css" rel="stylesheet" href="css/main.css"/>
+
+            <!--Let browser know website is optimized for mobile-->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		</head>
+         <style>
+         
+             header, main, footer {
+              font-family: "Microsoft JhengHei", sans serif;
+              padding-left: 300px;
+            }
+
+            @media only screen and (max-width : 992px) {
+              header, main, footer {
+                padding-left: 0;
+              }
+            }
+         
+         </style>
+		<body>
+        <main>
+		 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		 <script type="text/javascript" src="js/materialize.min.js"></script>
+		 <script type="text/javascript" src="js/main.js"></script>
+         
+        
+        
+        <nav class="top-nav">
+
+        <div class="navbar">
+        <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+            <nav class = " teal accent-3">
+              <div class="nav-wrapper">
+                <a href="#!" class="brand-logo center">AlgoTrading</a>
+                <ul class="right hide-on-med-and-down">
+                </ul>
+              </div>
+              <script>         
+                $('.dropdown-button').dropdown({
+                  inDuration: 300,
+                  outDuration: 225,
+                  constrainWidth: true, // Does not change width of dropdown to that of the activator
+                  hover: true, // Activate on hover
+                  gutter: 0, // Spacing from edge
+                  belowOrigin: true, // Displays dropdown below the button
+                  alignment: 'left', // Displays dropdown with edge aligned to the left of button
+                  stopPropagation: true // Stops event propagation
+                }
+              );
+              </script>
+            </nav>
+        </div>
+
+        </nav>
+
+        <!----nav bar ---->
+
+
+        <!----slide nav ----> 
+        <ul id="nav-mobile" class="side-nav fixed">
+		   <li>
+             <div class="userView">
+		     <div class="background">
+             
+		       <img src="https://static.pexels.com/photos/7976/pexels-photo.jpg">
+             
+		     </div>
+             
+		     <img class="circle" src="http://cdn.magdeleine.co/wp-content/uploads/2015/04/photo-1421809313281-48f03fa45e9f.jpeg">
+             
+		     <span class="white-text name">程式交易資訊站</span>
+		     <span class="white-text email">fufrank724@gmail.com</span>
+             </div>
+           </li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal" href="ml_menu.html">機器學習首頁</a></li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Similarity Base</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal" href="#">Distance</a></li>
+                      <li><a class="waves-effect waves-teal" href="#">K-means</a></li>
+                      <li><a class="waves-effect waves-teal" href="#">Hierarchical Clustering</a></li>
+                      <li><a class="waves-effect waves-teal" href="#">K-nearest Neighbor Models</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Information Base</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal" href="#">Entropy</a></li>
+                      <li><a class="waves-effect waves-teal" href="#">Decision Tree</a></li>
+                      <li><a class="waves-effect waves-teal" href="#">Radom Forest</a></li>
+                      <li><a class="waves-effect waves-teal" href="#">How to improve your decision tree</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Error Base</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal" href="#">Linear Regression</a></li>
+                      <li><a class="waves-effect waves-teal" href="#">Gradient Descent</a></li>
+                      <li><a class="waves-effect waves-teal" href="#">Classifcation</a></li>
+                      <li><a class="waves-effect waves-teal" href="#">Neural Network</a></li>
+                      <li><a class="waves-effect waves-teal" href="#">Deep Learning</a></li>
+                      <li><a class="waves-effect waves-teal" href="#">Convolutional Neural Network</a></li>
+                      <li><a class="waves-effect waves-teal" href="#">Recurrent Neural Network</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+           
+		 </ul>
+        
+        <div class="row">
+        <div class="m3"><span></span></div>
+        <div class="col s12 m6">
+          <div class="card ">
+            <div class="card-content">
+              <span><h4 class="center-align">Linear Regression</h4></span>
+              <h5><br/>一、什麼是 Linear Regression </h5>
+              <div class="card-image"><img src="img/ml/DL_ch1/2.jpg"></div>
+              <span><p>
+              Linear Regression(線性迴歸)是一個非常簡單的Error Base ML演算法。<br />
+              Regression function 是一個用來預測數值的函數，而Linear Regression就是以線性函數做預測。<br />
+              常見應用在像是股市的預測、房價預估等問題。<br />
+              <h5><br/>二、Regression function的設計</h5>
+              我們需要三個步驟來定義這個問題<br/>
+                <ol>
+                <li>設計model</li>
+                <li>function的優化</li>
+                <li>找出最優的function</li>
+                </ol>
+              
+                    
+                <h4>第一步：設計model。</h4>
+                <div class="card-image"><img src="img/ml/DL_ch1/4.jpg"></div>
+                <span>所謂的model就是很多個數學式的集合，透過這個數學式的集合我們可以順利的預測的我們要的值。<span></span></span><br />
+                <span><br /></span>
+                <span>這些式子一般最基礎版本就是wx+b(其實就是一元一次方程式啦)，不過我們必須要根據情況更換成別的function，例如資料分布看起來像二次方程式，我們最好得把function替換成二次方程式；有N個特徵值(feature)就將它換成N元一次方程式等等。</span><br />
+                <br />
+                <h4>第二步：對function進行優化。</h4>
+                <div class="card-image"><img src="img/ml/DL_ch1/7.jpg"></div>
+                <span>在設計好model之後我們就要來優化它啦！</span><br />
+                <span><br /></span>
+                <span>在談論優化問題前我們要先來談談什麼是監督式學習。</span><br />
+                <span>所謂的監督式學習就是我們得出題目(資料與model)考電腦，而電腦必須學習(調整model參數)以得到好的成績(高正確率)，不過如果題目出錯(不論是資料或是model)就不會有正確答案。</span><br />
+
+                <br />
+                <span>機器學習的優化方法就是設計一個 loss function 計算每一筆資料的誤差值，而計算方式有許多種，而最常見的是最小平方法。</span><br />
+                <span>我們可以假定每筆資料都是一個座標(X , Y)，X就是我們輸入的feature，Y就是他的值。至於為何最小平方法可以找到最小的loss呢？我們可以參考<a href="https://home.gamer.com.tw/creationDetail.php?sn=3546935" target="_blank">這一篇文章</a>。</span><br />
+                <br />
+                <h4>
+                第三步：選擇最優的參數</h4>
+                <div class="card-image"><img src="img/ml/DL_ch1/10.jpg"></div>
+                <div class="separator" >
+
+                <span>在尋找最小的loss的過程中，我們可以用暴力法去把每一個w和b算出來，透過暴力法也許我們可以找到一個Global minimun (最佳解)，但是因為w跟b有無限多個，也許等到天荒地老我們也沒辦法找到它，因此我們將會採用一個方法叫做<b>Gradient Descent</b>。</span><br />
+                <span>Gradient Descent的方法就是一開始先將loss function的參數隨機設定成W0，接著我們對參數w做<b>偏微分</b>便可得到當前loss function的斜率，若斜率為負，我們增加W0；若為正，就減少W0；斜率的絕對值越大，那麼更新的速度就會越快，Gradent Descent會一直重複上述動作做直到微分值為0。</span><br />
+                <div class="separator" >
+                <span><div class="card-image"><img src="img/ml/DL_ch1/11.jpg"></div><br /></span>
+                
+                <span>將上述的中文敘述寫成數學式就會變成這張投影片，而Learning rate備標註為常數miu，miu會決定每一次更新要讓function走多長的距離。</span><br />
+                <div class="separator" style="clear: both; text-align: center;">
+                <br /></div>
+                <div class="card-image"><img src="img/ml/DL_ch1/14.jpg"></div>
+                <span>我們把loss function的分布圖畫成一個二維的圖就會長的像上面這樣，紅色的線就是做Gradient Descent後的得到向量(Gradient)，Gradient就是loss的法線向量，當我們一直重複做Gradient Descent就會前往最中間的點也就是local minima。</span><br />
+                <span>如果看不懂可以看<a href="https://www.youtube.com/watch?v=9sJG7LjGCnI&amp;list=PLXO45tsB95cJ0U2DKySDmhRqQI9IaGxck&amp;index=4" target="_blank">莫凡的影片</a>，看完之後對Gradeint Descent的運作就會有比較好的了解。</span><br />
+                <span><h5><br />如何評估結果？</h5></span>
+                <div class="card-image"><img src="img/ml/DL_ch1/20.jpg"></div>
+                <span>我們可以透過模型在訓練資料(Training data)以及測試資料(Testing Data)上的表現來判斷一個模型的好壞</span><br />
+                <span>如果在訓練資料的表現很差，則代表Under fitting，此時就要回到第一步重新設計模型</span><br />
+                <span>如果再訓練資料良好，而在測試資料的表現很差，則代表Over fitting，此時就要透過其他方式來改善(詳見Error base第三章)</span><br />
+                <span></span><br />
+                <span></span><br />
+
+                
+                
+              </p></span>
+
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                     */
+                    
+                    var disqus_config = function () {
+                        this.page.url = "https://abc";  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "abc"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    
+                    (function() {  
+                        var d = document, s = d.createElement('script');
+                        
+                        s.src = 'https://prgramingnote.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                                 
+                <script id="dsq-count-scr" src="//prgramingnote.disqus.com/count.js" async></script>
+
+            </div>
+          </div>
+        </div>
+        </div>
+
+        </main>
+		</body>
+	</html>

@@ -1,0 +1,316 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/main.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <title>MQL5委託服務</title>
+      <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+      <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript" language="javascript">
+        function videochange(id) {
+          document.getElementById("player").innerHTML = videopanel(id);   
+        }
+
+        function videopanel(id) {
+        
+           str = '<iframe width="100%" height="350" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>';
+           return str;        
+        }
+        var x=document.getElementById("demo");
+        function getLocation()
+          {
+          if (navigator.geolocation)
+            {
+            navigator.geolocation.getCurrentPosition(showPosition);
+            }
+          else{x.innerHTML="Geolocation is not supported by this browser.";}
+          }
+        function showPosition(position)
+          {
+          x.innerHTML="Latitude: " + position.coords.latitude +
+          "<br />Longitude: " + position.coords.longitude;
+          }         
+
+        </script>
+     <style>
+         #slider {
+           width: 100%; position: relative; 
+
+         }
+        .modal.open{
+            width: 60%;
+            max-height: 97%;
+            height: 97%;
+
+        }
+        .container {
+          margin: 0 auto;
+          max-width: 80%;
+          width: 80%;
+        }
+        main{
+        font-family: "Microsoft JhengHei", sans serif;
+        padding-left: 0px;
+        }
+
+    </style>
+     
+     <script>
+       $(document).ready(function(){
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal({
+                  dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                  startingTop: '100%', // Starting top style attribute
+                  endingTop: '1%', // Ending top style attribute  
+
+                });
+          });
+     </script>
+    <script type="text/javascript">
+        function formresponse() {
+            var m = document.forms["form1"]["lineID"].value;
+            var d = document.forms["form1"]["email"].value;
+            var c = document.forms["form1"]["content"].value;
+
+            if (m==null || m=="")
+               {
+                alert("LineID不可為空白!");
+                return false;
+               }
+            else if (d==null || d=="")
+               {
+                alert("Email不可為空白!");
+                return false;
+               }
+            else if (c==null || c=="")
+               {
+                alert("委託內容不可為空白!");
+                return false;
+               }
+            else
+               {
+                var MySubmit = "https://docs.google.com/forms/d/e/1FAIpQLSct1D3v7Ky-AJ45hQ0YkwDNOb-8GEY8WHFcXjZlj81SLcH6Mg/formResponse?entry.735384546=" + m + "&entry.949277366=" + d + "&entry.571249634=" + c + "&submit=Submit";
+                $("#formresponse").html(unescape("%3Cscript type='text/javascript' src='" + MySubmit + "'%3E%3C/script%3E"));
+                var NewOpen = window.open("mql5_order_result.html");
+                
+                
+               }
+               alert(m);
+        }
+    </script>
+    
+    
+    <main>
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="">MQL5 教學</a></li>
+          <li><a href="ml_menu.html">機器學習演算法</a></li>
+          <li><a href="paper_menu.html">專案研究</a></li>
+        </ul>
+        <div class="navbar-fixed">
+        <nav class = "grey lighten-1">
+          <div class="nav-wrapper">
+            <a href="" class="brand-logo center">MQL5 Note</a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="">Home</a></li>
+              <li><a href="">關於作者</a></li>
+              <!-- Dropdown Trigger -->
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">DashBoard<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+          <script>         
+            $('.dropdown-button').dropdown({
+              inDuration: 300,
+              outDuration: 225,
+              constrainWidth: true, // Does not change width of dropdown to that of the activator
+              hover: true, // Activate on hover
+              gutter: 0, // Spacing from edge
+              belowOrigin: true, // Displays dropdown below the button
+              alignment: 'left', // Displays dropdown with edge aligned to the left of button
+              stopPropagation: true // Stops event propagation
+            }
+          );
+          </script>
+        </nav>
+        </div>
+
+
+        <script>$('.carousel.carousel-slider').carousel({fullWidth: true});
+                $(document).ready(function(){$('.slider').slider();});</script>
+          <div id ="slider" class="slider">
+            
+             <ul class="slides">               
+
+               <li>
+                 <img src="img/algo_Trade.jpg"> <!-- random image -->
+                 <div class="caption left-align">
+                   <h3></h3>
+                   <!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+                   
+                 </div>
+                 
+               </li>
+
+
+             </ul>
+             
+         </div>
+
+           <!-----------------cards----------------->
+           <div class="section white">
+             <div class="row container">
+
+              <div class="row flow-text">
+                <span id="formresponse"></span>
+                <form name="form1" class="col s12" action="javascript:formresponse();">
+                  <div class="row">
+                    <div class="col s12">
+                    <p >
+                      注意事項：<br/>
+                      本服務不支援指標撰寫，僅提供代寫可回測的EA或是幫忙處理一些MQL5上的疑難雜症<br/>
+                      EA內容請避免當根進場，並避免使用過多的指標或參數<br/>
+                      代寫完成後除非有邏輯或是執行上的錯誤,否則不提供更新服務<br/>
+                      EA收費方式視內容而定，若太簡單會免費<br/>
+                      在委託代寫前，我仍希望委託者先盡量學著自己寫(本站有簡單的教學文章)，如果真的寫不出來再來委託代寫<br/>
+                      如果自己寫的EA有無法處理的錯誤，可以在委託單上面附註希望幫忙DEBUG，只要不是過分要求就不收費<br/>
+                      委託單完成後站主會盡快用Line以及email跟您聯絡，請記得開啟朋友邀情的選項<br/>
+                    </p>   
+                    </div>
+                  </div>
+                
+                  <div class="row">
+                  
+                    <div class="input-field col s6">
+                      <input id="lineID" type="text" class="validate" name="lineID">
+                      <label for="lineID">Line ID</label>
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col s12">
+                      
+                      <div class="input-field ">
+                        <input id="email" type="email" class="validate" name="email">
+                        <label for="email" data-error="wrong" data-success="right">Email</label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col s12">
+
+                        <div class="input-field">
+                          <textarea id="content" class="materialize-textarea" name="content"></textarea>
+                          <label for="content">代寫內容</label>
+                        </div>
+
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col offset-s8 offset-m10">
+                      <button class="btn waves-effect waves-light" type="submit" name="Submit">送出
+                        <i class="material-icons right">send</i>
+                      </button>
+
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+             </div>
+           </div>
+    
+        <div id="modal1" class="modal">
+          <div class="modal-content ">
+            <h3 class="center-align">MQL5基本語法</h3>
+            <p class="center-align"><img src="img/mql52.jpg" width="50%" height="50%" ></p>
+            <p class = "flow-text">
+            筆者MQL4語法學自<a href="https://histock.tw/school/cash.html">Beequant</a><br/>
+            由於MQL4與MQL5語法相近，因此學習MQL5的速度相當快。<br/>
+            本系列文章將紀錄MQL5基本與常見語法，希望能幫助更多有興趣的人入門。
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">確定</a>
+          </div>
+        </div>
+        
+        <div id="modal2" class="modal">
+          <div class="modal-content ">
+            <h3 class="center-align">EA開發筆記</h3>
+            <p class="center-align"><img src="img/note.jpg" width="70%" height="80%" >
+            <p class = "flow-text">
+            分享一些自己寫的簡單EA以及在MT5論壇上的文章實作<br/>           
+  
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">確定</a>
+          </div>
+        </div>
+        
+        <div id="modal3" class="modal">
+          <div class="modal-content ">
+            <h3 class="center-align">程式交易觀念</h3>
+            <p class="center-align"><img src="img/idea.jpg" width="50%" height="50%" ></p>
+            <p class = "flow-text">
+            紀錄一下前輩們分享的一些程式交易觀念以及在MT5上常見的陷阱<br/>
+
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">確定</a>
+          </div>
+        </div>      
+    </main>
+    
+      <footer class = "page-footer">
+         <div class = "row">
+            <div class = "col s12 m6 l6">
+               <h5 class = "white-text">Footer Content</h5>
+            </div>
+            
+            <div class = "col">
+               <ul>
+                  <li><a href = "#" class = "grey-text text-lighten-4 right">
+                     Help</a></li>
+                  <li><a href = "#" class = "grey-text text-lighten-4 right">
+                     Privacy and Terms</a></li>
+                  <li><a href = "#" class = "grey-text text-lighten-4 right">
+                     User Agreement</a></li>
+               </ul>
+            </div>
+         </div>
+         
+         <div class = "footer-copyright">
+            <div class = "container">
+               © 2016 Copyright Information
+               <a class = "grey-text text-lighten-4 right" href = "#!">Links</a>
+            </div>
+         </div>         
+       </footer>
+                 
+
+
+    </body>
+
+  </html>

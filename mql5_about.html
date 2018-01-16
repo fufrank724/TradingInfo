@@ -1,0 +1,243 @@
+ <!DOCTYPE html>
+	<html>
+
+		<head>
+				<title>程式交易的各種疑難雜症</title>
+        <!--Import Google Icon Font-->
+         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+         <!--Import materialize.css-->
+         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+         <link type="text/css" rel="stylesheet" href="css/main.css"/>
+
+         <!--Let browser know website is optimized for mobile-->
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		</head>
+         <style>
+         
+             header, main, footer {
+              font-family: "Microsoft JhengHei", sans serif;
+              padding-left: 300px;
+            }
+
+            @media only screen and (max-width : 992px) {
+              header, main, footer {
+                padding-left: 0;
+              }
+            }
+         
+         </style>
+		<body>
+        <main>
+      <!--Import jQuery before materialize.js-->
+		 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		 <script type="text/javascript" src="js/materialize.min.js"></script>
+		 <script type="text/javascript" src="js/main.js"></script>
+        
+
+        
+        
+        <nav class="top-nav ">
+
+        <div class="navbar">
+        <div class="container "><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+            <nav class = " teal accent-3">
+              <div class="nav-wrapper grey">
+                <a href="#!" class="brand-logo center ">MQL5 Note</a>
+                <ul class="right hide-on-med-and-down">
+                </ul>
+              </div>
+              <script>         
+                $('.dropdown-button').dropdown({
+                  inDuration: 300,
+                  outDuration: 225,
+                  constrainWidth: true, // Does not change width of dropdown to that of the activator
+                  hover: true, // Activate on hover
+                  gutter: 0, // Spacing from edge
+                  belowOrigin: true, // Displays dropdown below the button
+                  alignment: 'left', // Displays dropdown with edge aligned to the left of button
+                  stopPropagation: true // Stops event propagation
+                }
+              );
+              </script>
+            </nav>
+        </div>
+
+        </nav>
+        <script type="text/javascript">
+            function warn() {
+                alert("網站尚未完成，敬請期待");
+            }
+        </script>
+        <!----nav bar ---->
+
+
+        <!----slide nav ----> 
+        <ul id="nav-mobile" class="side-nav fixed">
+		   <li>
+             <div class="userView">
+		     <div class="background">
+             
+		       <img src="https://images.pexels.com/photos/744485/pexels-photo-744485.jpeg">
+             
+		     </div>
+             
+		     <img class="circle" src="img/mentori.jpg">
+             
+		     <span class="white-text name">程式交易資訊站</span>
+		     <span class="white-text email">fufrank724@gmail.com</span>
+             </div>
+           </li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal" href="mql5_menu.html">MQL5筆記首頁</a></li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">MQL5基本語法</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal">變數宣告與資料結構</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">流程控制</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">物件與函數</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">模組化</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">EA架構與實例</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">常用的函數與語法</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">EA開發筆記</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">手單懶人EA</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">懶人開發法</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">模糊領論應用與實作</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">程式交易觀念</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal" href = "mql5_about.html">程式交易三兩事</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">歷史資料與時區</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">風險淺談</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">策略穩定性測試</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+           
+		 </ul>
+        
+        <div class="row">
+
+        <div class="col s12 m8 offset-m2">
+          <div class="card ">
+            <div class="card-content">
+              <span><h4 class="center-align">程式交易的各種疑難雜症</h4></span>
+
+              <h5><br/>一、什麼是程式交易 </h5>
+
+              <span><p>這標頭很廢話，文章內容也很廢話，但是我覺得有一些很重要的觀念是新手必須知道的(雖然以我的年資好像沒資格寫這類的文章)</p></span>
+              <span><p>程式交易或農場一點稱之為智能交易，國外稱之為演算法交易(AlgoTrading)</p></span>   
+              <span><p>在演算法交易中，最基本的就是條件式演算法</p></span>   
+              <span><p>也就是說你的程式裡面寫了一些條件，例如由下向上穿過近五根K棒高點就買進，然後停損停利兩百點</p></span>
+              <span><p>高竿一點的可能就會用一些數學的演算法，例如模糊理論、決策樹、類神經網路等方式實踐演算法交易</p></span>
+              <span><p><b>但是</b>，他一點也不智能</p></span>
+              <span><p>所謂的智能就是程式會自動去學習，然後自己避開可能會虧損的情況</p></span>
+              <span><p>但是就現今的演算法交易而言他是做不到這件事的</p></span>
+              <span><p>即使你用<b>機器學習演算法</b>也一樣</p></span>
+              <span><p>因此，對於現在很多廠商為了推行程式交易而說這東西是<b>智能</b>，我實在是很不以為然</p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              
+              <h5><br/>二、有什麼是程式交易做不到的 </h5>
+
+              <span><p>程式交易並非萬能</p></span>
+              <span><p>他寫不出M頭W底，也很難寫出形態學(三角收斂之類的)</p></span>   
+              <span><p>另外承上所說，他無法自動增加條件避開會虧損的情況(當然你可以自己增加條件)</p></span>   
+              <span><p>跟<b>頂尖</b>的主觀交易者比起來他也無法賺到那麼多的錢</p></span>
+              <span><p>他更無法幫你擺脫所有人性的缺點，例如不守紀律，自動拉高甚至關掉停損停利點</p></span>
+              <span><p>所以如果你對程式交易有這些迷思，奉勸你還是早點洗洗睡比較好</p></span>
+              
+
+              <h5><br/>三、所以我說那個優點呢？ </h5>
+
+              <span><p>數落了這麼多程式交易的缺點，他總該有些優點的</p></span>
+              <span><p>程式交易雖然不像主觀可以賺那麼多，但是透過正確的程式交易他還是<b>有可能</b>幫助你穩定獲利的</p></span>   
+              <span><p>透過正確的程式設計，你可以知道你的策略的獲利程度以及可能的最大虧損</p></span>
+              <span><p>藉由這樣的方式，你可以在市場上省下許多學費</p></span>
+              <span><p>比起主觀交易，程式交易需要比較多一點硬體投資</p></span>
+              <span><p>除了跑最佳化所需要的硬體，你可能還需要一台24小時幫你盯盤的電腦</p></span>
+              <span><p>這樣一來即使在上班時間你還是可以進行交易</p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+
+              <span><h5>四、程式交易該準備什麼？</h5></span>
+              <span><p>你需要一台桌機，一條夠穩的網路，還有根據你的商品準備對應的平台</p></span>
+              <span><p>當然你可以自己用券商API寫一套武器，但是相信我，光是Debug就夠你受的了</p></span>
+              <span><p>因此用現成的平台問題可能會少一點</p></span>
+              <span><p>另外如果是下外匯保證金，你可能會需要一台24小時開機的電腦</p></span>
+              <span><p>若想省下硬體費用，可以選擇使用VPS，因為你開的券商可能是在海外，若使用國內的電腦可能會導致Ping很高<br/><br/></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              
+              <span><h5>五、如何避免寫出錯誤的程式</h5></span>
+              <span><p>在交易的程式設計上，我們應該盡可能的減少使用參數或是邏輯</p></span>
+              <span><p>越複雜的邏輯或參數，越容易使程式overfitting</p></span>
+              <span><p>因此在設計的過程中，一定要設定樣本內與樣本外</p></span>
+              <span><p>設計過程只看樣本內，樣本外做為參考績效</p></span>
+              <span><p>如果你願意，甚至可以將設計過成弄得更嚴苛，將資料分成三等份</p></span>
+              <span><p>不過樣本內的樣本依然最好要包含多頭與空頭市場</br></p></span>
+              <span><p></p></span>
+              <span><p>今年上完機器學習，我覺得程式交易的設計跟機器學習Model某些方面很像(詳見機器學習的如何選擇模型篇)</p></span>
+              <span><p>我們可以把市場想像成目標函數，而我們寫的策略或是投資組合的loss就是績效*(-1)</p></span>
+              <span><p>在設計上，我們要努力降低loss(提升績效)，並且盡可能避免使用過多的參數或條件以減少overfitting的機率</p></span>
+              <span><p>換言之，你當然可以在設計上使用一拖拉庫的指標語法，但是這樣overfitting的機會就會非常高</p></span>
+              <span><p>另外，以這個觀點來說，每一個策略都是一個函數，而你的model就是投資組合</p></span>
+              <span><p>使用越多的函數你的loss越容易降低，同時在OOS(樣本外)的loss也越容易跟IS(樣本內)相同</p></span>
+              <span><p>若這個model能夠適用更多的市場(樣本)，那麼他的失效機率就會越低<br/><br/></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              
+              <span><h5>總結</h5></span>
+              <span><p>在交易的程式設計上，我們應該盡可能的減少使用參數或是邏輯</p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                     */
+                    
+                    var disqus_config = function () {
+                        this.page.url = "https://aboutalgotrade";  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "aboutalgotrade"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    
+                    (function() {  
+                        var d = document, s = d.createElement('script');
+                        
+                        s.src = 'https://prgramingnote.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                                 
+                <script id="dsq-count-scr" src="//prgramingnote.disqus.com/count.js" async></script>
+
+            </div>
+          </div>
+        </div>
+        </div>
+
+        </main>
+		</body>
+	</html>

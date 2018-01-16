@@ -1,0 +1,227 @@
+ <!DOCTYPE html>
+	<html>
+
+		<head>
+          <title>變數宣告與資料結構</title>
+          <!--Import Google Icon Font-->
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <!--Import materialize.css-->
+          <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+          <!--Let browser know website is optimized for mobile-->
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		</head>
+         <style>
+         
+             header, main, footer {
+              font-family: "Microsoft JhengHei", sans serif;
+              padding-left: 300px;
+            }
+
+            @media only screen and (max-width : 992px) {
+              header, main, footer {
+                padding-left: 0;
+              }
+            }
+         
+         </style>
+		<body>
+        <main>
+          <!--Import jQuery before materialize.js-->
+		 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		 <script type="text/javascript" src="js/materialize.min.js"></script>
+		 <script type="text/javascript" src="js/main.js"></script>
+        
+        
+        <nav class="top-nav ">
+
+        <div class="navbar">
+        <div class="container "><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+            <nav class = " teal accent-3">
+              <div class="nav-wrapper grey">
+                <a href="#!" class="brand-logo center ">MQL5 Note</a>
+                <ul class="right hide-on-med-and-down">
+                </ul>
+              </div>
+              <script>         
+                $('.dropdown-button').dropdown({
+                  inDuration: 300,
+                  outDuration: 225,
+                  constrainWidth: true, // Does not change width of dropdown to that of the activator
+                  hover: true, // Activate on hover
+                  gutter: 0, // Spacing from edge
+                  belowOrigin: true, // Displays dropdown below the button
+                  alignment: 'left', // Displays dropdown with edge aligned to the left of button
+                  stopPropagation: true // Stops event propagation
+                }
+              );
+              </script>
+            </nav>
+        </div>
+
+        </nav>
+
+        <!----nav bar ---->
+
+
+        <!----slide nav ----> 
+        <ul id="nav-mobile" class="side-nav fixed">
+		   <li>
+             <div class="userView">
+		     <div class="background">
+             
+		       <img src="https://images.pexels.com/photos/744485/pexels-photo-744485.jpeg">
+             
+		     </div>
+             
+		     <img class="circle" src="img/mentori.jpg">
+             
+		     <span class="white-text name">程式交易資訊站</span>
+		     <span class="white-text email">fufrank724@gmail.com</span>
+             </div>
+           </li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal" href="mql5_menu.html">MQL5筆記首頁</a></li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">MQL5基本語法</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal">變數宣告與資料結構</a></li>
+                      <li><a class="waves-effect waves-teal">流程控制</a></li>
+                      <li><a class="waves-effect waves-teal">物件與函數</a></li>
+                      <li><a class="waves-effect waves-teal">模組化</a></li>
+                      <li><a class="waves-effect waves-teal">EA架構與實例</a></li>
+                      <li><a class="waves-effect waves-teal">常用的函數與語法</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">EA開發筆記</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal">手單懶人EA</a></li>
+                      <li><a class="waves-effect waves-teal">懶人開發法</a></li>
+                      <li><a class="waves-effect waves-teal">模糊領論應用與實作</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">程式交易觀念</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal">程式交易的各種疑難雜症</a></li>
+                      <li><a class="waves-effect waves-teal">歷史資料與時區</a></li>
+                      <li><a class="waves-effect waves-teal">風險淺談</a></li>
+                      <li><a class="waves-effect waves-teal">策略穩定性測試</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+           
+		 </ul>
+        
+        <div class="row">
+        <div class="m3"><span></span></div>
+        <div class="col s12 m6">
+          <div class="card ">
+            <div class="card-content">
+              <span><h4 class="center-align">變數宣告與資料結構</h4></span>
+              <div class="video-container">
+                <iframe  src="https://www.youtube.com/embed/nszw6WCrvHA" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+              </div>
+              <h5><br/>一、基本變數宣告 </h5>
+
+              <span><p>MQL5語法基本承襲自C++，所以宣告變數的方式也跟C++一模一樣，都是 <b>資料型態 變數名稱 = 變數的值 ;</b></p></span>
+              <span><p>MQL5目前是支援中文的變數名稱，不過有時候會因此觸發不可預期的錯誤，為了避免發生這樣的問題，還是要盡可能地取英文的變數</p></span>   
+              <span><p></p></span>   
+              <span><p>以下是宣告變數的範例</p></span>
+              
+              <blockquote><code class="language-c">
+                    int 整數 = 10;<br/>
+                    float 小數 = 10.999;<br/>
+                    string 字串 = "我是字串";<br/>
+                    bool 布林變數 = 整數>小數;<br/>
+                    ulong 長整數 = 100;  
+                </code></blockquote> 
+                
+              <span><p>對新手來說常犯的錯誤就是沒有打分號，在每一次的變數宣告或是運算結束後都應該要加上分號讓電腦知道該行的結尾在哪</p></span>
+              <span><p>上述的範例中我們宣告了五種不同資料型態的變數</p></span>
+              <span><p>分別是 <br/><b>整數 小數 字串 布林變數 長整數</b></p></span>
+              <span><p>一般來說比較有問題的是布林變數和長整數</p></span>
+              <span><p>布林變數是專門用來儲存條件判斷的資料型態，儲存的值會是true或是false</p></span>
+              <span><p>以上面的例子來說，因為整數是小於小數，所以布林變數的值便是false</p></span>
+              <span><p>而長整數跟整數的差別在於兩者可儲存的資料長度不同</p></span>
+              <span><p>有時候有可能會因為資料的大小超過變數本身能儲存的長度而造成錯誤</p></span>
+              <span><p>接下來介紹一下變數的資料轉換還有運算</p></span>
+              <blockquote><code class="language-c">
+                    int 第二個整數 = (int) 小數;<br/>
+                    float 第二個小數 = (float)整數;<br/>
+                    第二個整數 = 第二個整數+整數;<br/>
+                    string 第二個字串 = DoubleToString(小數);<br/>
+                    bool 第二個布林變數 = ((整數)>(小數) || (整數)<(小數));
+              </code></blockquote> 
+              <span><p>前兩行示範了怎麼把變數轉成小數和整數</p></span>
+              <span><p>第三行則是加法運算，減法乘法除法也是如此</p></span>
+              <span><p>第四行是呼叫了一個<b>DoubleToString</b>的<b>函式</b>將小數轉換成字串</p></span>
+              <span><p>函式的部分會在後面的文章再做說明</p></span>
+              <span><p>布林變數的運算就是邏輯運算</p></span>
+              <span><p>邏輯運算有三種運算方式：<b>而且(&&)、或是(||)、不是(!)</b>三種運算方式</p></span>
+              <span><p>主要是用來做條件運算</p></span>
+              <span><p>以上圖來說，第二個布林變數的值就是 整數大於小數，或是整數小於小數也就是true</p></span>
+              <span><p>寫到這邊大家應該還是搞不懂這東西在幹嘛，不過等到下一章的邏輯判斷時應該會比較懂他的用途</br></p></span>
+              <span><p></br></p></span>
+              <span><h5>二、常用的資料結構─陣列</h5></span>              
+              <span><p>所謂的陣列其實就是一個存放許多相同資料型態的箱子</p></span>
+              <span><p>而這個箱子中的每一個格子都有他的編號</p></span>
+              <span><p>你可以把它取出來，也可以用來存放其他的值</p></span>
+              <span><p>編號的開頭是從0開始，也就是說如果你宣告的陣列長度是3，那麼編號就是0~2</p></span>
+              <span><p>我們宣告陣列的方式為 <br/><b>資料型態 陣列名稱[陣列的長度] = {陣列的內容物1,陣列的內容物2,...,陣列的內容物N} ;</b></p></span>
+              <span><p>下圖將示範如何宣告陣列</p></span>
+              <div class="card-image"><img src="img/mql5/array.png"></div>
+              <span><p>以上圖的範例來說，<b>array1D[0]</b>的值就是5，<b>array1D[2]</b>的值則是25</p></span>
+              <span><p>陣列在MQL5中是一個非常重要的資料格式</p></span>
+              <span><p>許多資料都是以資料的形式儲存，例如指標、字串等</p></span>
+              <span><p>因此請務必要搞懂陣列的運作方式</p></span>
+              <span><p>變數宣告與資料結構到此結束，若有問題歡迎留言我會盡力回答</p></span>
+              <span><p><br/><br/><br/>廣告時間</p></span>
+              <span><p>若對更多的外匯知識有興趣，可以參考<a href = https://histock.tw/school/cash.html>BeeQuant</a></p></span>
+              <span><p>學院的課程除了EA以及外匯知識的教學外，更會教導正確的程式交易觀念</p></span>
+              <span><p>雖然無法讓您馬上致富，至少能讓您少走冤枉路</p></span>
+              <span><p></p></span>
+              <span>
+                        
+              
+              </span>
+
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                     */
+                    
+                    var disqus_config = function () {
+                        this.page.url = "https://abc";  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "abc"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    
+                    (function() {  
+                        var d = document, s = d.createElement('script');
+                        
+                        s.src = 'https://prgramingnote.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                                 
+                <script id="dsq-count-scr" src="//prgramingnote.disqus.com/count.js" async></script>
+
+            </div>
+          </div>
+        </div>
+        </div>
+
+        </main>
+		</body>
+	</html>

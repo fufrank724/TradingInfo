@@ -1,0 +1,203 @@
+ <!DOCTYPE html>
+	<html>
+
+		<head>
+          <title>MQL5基本語法</title>
+          <!--Import Google Icon Font-->
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <!--Import materialize.css-->
+          <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+          <!--Let browser know website is optimized for mobile-->
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		</head>
+         <style>
+         
+             header, main, footer {
+              font-family: "Microsoft JhengHei", sans serif;
+              padding-left: 300px;
+            }
+
+            @media only screen and (max-width : 992px) {
+              header, main, footer {
+                padding-left: 0;
+              }
+            }
+         
+         </style>
+		<body>
+        <main>
+          <!--Import jQuery before materialize.js-->
+		 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		 <script type="text/javascript" src="js/materialize.min.js"></script>
+		 <script type="text/javascript" src="js/main.js"></script>
+
+        
+        
+        
+        <nav class="top-nav ">
+
+        <div class="navbar">
+        <div class="container "><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+            <nav class = " teal accent-3">
+              <div class="nav-wrapper grey">
+                <a href="#!" class="brand-logo center ">MQL5 Note</a>
+                <ul class="right hide-on-med-and-down">
+                </ul>
+              </div>
+              <script>         
+                $('.dropdown-button').dropdown({
+                  inDuration: 300,
+                  outDuration: 225,
+                  constrainWidth: true, // Does not change width of dropdown to that of the activator
+                  hover: true, // Activate on hover
+                  gutter: 0, // Spacing from edge
+                  belowOrigin: true, // Displays dropdown below the button
+                  alignment: 'left', // Displays dropdown with edge aligned to the left of button
+                  stopPropagation: true // Stops event propagation
+                }
+              );
+              </script>
+            </nav>
+        </div>
+
+        </nav>
+        <script type="text/javascript">
+            function warn() {
+                alert("網站尚未完成，敬請期待");
+            }
+        </script>
+        <!----nav bar ---->
+
+
+        <!----slide nav ----> 
+        <ul id="nav-mobile" class="side-nav fixed">
+		   <li>
+             <div class="userView">
+		     <div class="background">
+             
+		       <img src="https://images.pexels.com/photos/744485/pexels-photo-744485.jpeg">
+             
+		     </div>
+             
+		     <img class="circle" src="img/mentori.jpg">
+             
+		     <span class="white-text name">程式交易資訊站</span>
+		     <span class="white-text email">fufrank724@gmail.com</span>
+             </div>
+           </li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal" href="mql5_menu.html">MQL5筆記首頁</a></li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">MQL5基本語法</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal">變數宣告與資料結構</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">流程控制</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">物件與函數</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">模組化</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">EA架構與實例</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">常用的函數與語法</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">EA開發筆記</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">手單懶人EA</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">懶人開發法</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">模糊領論應用與實作</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">程式交易觀念</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal" href = "mql5_about.html">程式交易三兩事</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">歷史資料與時區</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">風險淺談</a></li>
+                      <li><a class="waves-effect waves-teal" onclick="warn()">策略穩定性測試</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+           
+		 </ul>
+        
+        <div class="row">
+        <div class="col s12 m8 offset-m2">
+          <div class="card ">
+            <div class="card-content">
+              <span><h4 class="center-align">MQL5基本語法</h4></span>
+              <h5><br/>一、MQL5介紹 </h5>
+
+              <span><p>MQL5語法基本承襲自C++，所以許多語法都與C/C++一模一樣</p></span>
+              <span><p>文末會附上一些我覺得講得還不錯的資料和影片</p></span>   
+              <span><p>網路上有很多教學都寫得很完整，建議大家如果遇到問題可以多查資料會有不錯的效果<<br/><br/></p></span>   
+              <span><p>以下將以<b><a href="https://openhome.cc/Gossip/CGossip/">OpenHome：語言技術：C 語言</a></b>為基礎告訴大家有那些東西一定要學會</p></span>  
+              
+              <span><p>二、有哪些東西是必學的</p></span>   
+              <span><p>在看資料前，我們必須了解有哪一些東西是必學的</p></span> 
+              <blockquote>
+              <ul>
+                <li>1. 資料型態與變數</li>
+                <li>2. 運算</li>
+                <li>3. 流程控制</li>
+                <li>4. 陣列</li>
+                <li>5. 函數</li>
+              </ul>
+              </blockquote>
+              <span><p>資料型態與變數只要學到printf()即可</p></span>   
+              <span><p>運算、函數、陣列則是全部都要會</p></span>   
+              <span><p>流程控制則至少要把While 迴圈學完</p></span>   
+              <span><p>上面五個部分全部學完就可以開始正式學MQL5語法了</p></span>   
+              <span><p>若你覺得文字的部分太艱澀，下面有一系列的Youtube影片有教學，可以參考看看</p></span>   
+              <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/of7j8vrFBwU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>              
+              </div>
+               
+              <span><p><br/><br/><br/>廣告時間</p></span>
+              <span><p>站主的程式交易學自<a href = https://histock.tw/school/cash.html>BeeQuant</a></p></span>  
+              <span><p><a href = https://histock.tw/school/cash.html>BeeQuant</a>
+                       除了EA以及外匯知識的教學外，更會教導您正確的程式交易觀念</p></span>
+              <span><p>雖然無法讓您馬上致富，至少能讓您少走冤枉路</p></span>
+              <span><p></p></span>
+              <span>
+                        
+              
+              </span>
+
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                     */
+                    
+                    var disqus_config = function () {
+                        this.page.url = "https://abc";  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "abc"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    
+                    (function() {  
+                        var d = document, s = d.createElement('script');
+                        
+                        s.src = 'https://prgramingnote.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                                 
+                <script id="dsq-count-scr" src="//prgramingnote.disqus.com/count.js" async></script>
+
+            </div>
+          </div>
+        </div>
+        </div>
+
+        </main>
+		</body>
+	</html>

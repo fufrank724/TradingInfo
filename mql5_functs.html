@@ -1,0 +1,241 @@
+ <!DOCTYPE html>
+	<html>
+
+		<head>
+          <title>MQL5基本語法</title>
+          <!--Import Google Icon Font-->
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <!--Import materialize.css-->
+          <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+          <!--Let browser know website is optimized for mobile-->
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		</head>
+         <style>
+         
+             header, main, footer {
+              font-family: "Microsoft JhengHei", sans serif;
+              padding-left: 300px;
+            }
+
+            @media only screen and (max-width : 992px) {
+              header, main, footer {
+                padding-left: 0;
+              }
+            }
+         
+         </style>
+		<body>
+        <main>
+          <!--Import jQuery before materialize.js-->
+		 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		 <script type="text/javascript" src="js/materialize.min.js"></script>
+		 <script type="text/javascript" src="js/main.js"></script>
+
+        
+        
+        
+        <nav class="top-nav ">
+
+        <div class="navbar">
+        <div class="container "><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+            <nav class = " teal accent-3">
+              <div class="nav-wrapper grey">
+                <a href="#!" class="brand-logo center ">MQL5 Note</a>
+                <ul class="right hide-on-med-and-down">
+                </ul>
+              </div>
+              <script>         
+                $('.dropdown-button').dropdown({
+                  inDuration: 300,
+                  outDuration: 225,
+                  constrainWidth: true, // Does not change width of dropdown to that of the activator
+                  hover: true, // Activate on hover
+                  gutter: 0, // Spacing from edge
+                  belowOrigin: true, // Displays dropdown below the button
+                  alignment: 'left', // Displays dropdown with edge aligned to the left of button
+                  stopPropagation: true // Stops event propagation
+                }
+              );
+              </script>
+            </nav>
+        </div>
+
+        </nav>
+
+        <!----nav bar ---->
+
+
+        <!----slide nav ----> 
+        <ul id="nav-mobile" class="side-nav fixed">
+		   <li>
+             <div class="userView">
+		     <div class="background">
+             
+		       <img src="https://images.pexels.com/photos/744485/pexels-photo-744485.jpeg">
+             
+		     </div>
+             
+		     <img class="circle" src="img/mentori.jpg">
+             
+		     <span class="white-text name">程式交易資訊站</span>
+		     <span class="white-text email">fufrank724@gmail.com</span>
+             </div>
+           </li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal" href="mql5_menu.html">MQL5筆記首頁</a></li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">MQL5基本語法</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal">變數宣告與資料結構</a></li>
+                      <li><a class="waves-effect waves-teal">流程控制</a></li>
+                      <li><a class="waves-effect waves-teal">物件與函數</a></li>
+                      <li><a class="waves-effect waves-teal">模組化</a></li>
+                      <li><a class="waves-effect waves-teal">EA架構與實例</a></li>
+                      <li><a class="waves-effect waves-teal">常用的函數與語法</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">EA開發筆記</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal">手單懶人EA</a></li>
+                      <li><a class="waves-effect waves-teal">懶人開發法</a></li>
+                      <li><a class="waves-effect waves-teal">模糊領論應用與實作</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">程式交易觀念</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal">程式交易是什麼</a></li>
+                      <li><a class="waves-effect waves-teal">歷史資料與時區</a></li>
+                      <li><a class="waves-effect waves-teal">風險淺談</a></li>
+                      <li><a class="waves-effect waves-teal">策略穩定性測試</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+           
+		 </ul>
+        
+        <div class="row">
+        <div class="col s12 m8 offset-m2">
+          <div class="card ">
+            <div class="card-content">
+              <span><h4 class="center-align">變數宣告與資料結構</h4></span>
+              <span><p class = "red center-align">在閱讀本章節前，請務必先將上一章：MQL5基礎的教材看完，否則會有代溝</p></span>              
+              
+              <h5><br/>一、MQL5基本函數介紹 </h5>
+              <span><p>在看完了MQL5基本語法後(其實是C語言教材)，我們就要進入到撰寫EA的階段了</p></span>
+              <span><p>在我們開啟一個空白的EA檔案後，會發現裡面的畫面會如下圖</p></span>   
+              <div class="card-image"><img src="img/mql5/func.jpg"></div>
+              
+              <span><p>紅框的函數是<b>OnInit函數</b>只會在EA開啟的時候執行</p></span>                 
+              <span><p>在OnInit中，我們通常會把一些一次性設定設定的東西放在這邊</p></span>
+              <span><p>例如<b>ArraySetAsSesies</b>、<b>ObjectCreate</b>等函數，或是參數初始化</p><br/></span>
+              
+              <span><p>綠框的是<b>DeInit函數</b>只有在EA關閉的時候會執行</p></span>   
+              <span><p>在DeInit函數中，我們通常會把一些必須釋放記憶體的函數在這邊執行</p></span>
+              <span><p>例如<b>ObjectDelete</b>函數</p><br/></span>
+              
+              <span><p>藍框的函數是<b>OnTick函數</b>，每一次有成交單的時候都會執行</p></span>   
+              <span><p>我們會把我們的交易主邏輯放在這邊，還有其他要隨著時間更新的東西放在這<br/></p></span>   
+              <span><p>除了這三個函數外，MQL5中還有其他不同的函數，每個函數都有不同的功用，但在基礎EA中我們會用到的通常只有這三個。<br/><br/></p></span>
+              
+              <span><p>在MQL5中，若我們將變數放在函數以外的地方，那麼這些變數我們稱之為<b>全域變數</b>，反之，則稱為<b>區域變數</b></p></span>
+              <span><p>區域變數在函數執行後就會被系統刪除，全域變數則會一直存活到EA關閉後還會被刪除</p></span>
+              <span><p>對MT5熟悉的朋友應該知道MT5有一個內建的東西也叫全域變數，那麼我們這邊講的並不是那個東西，那個東西會在之後的文章提到，不過我們暫時不去理他</p></span>
+              <span><p>為了避免發生不必要的錯誤，我們會把全域變數跟區域變數取不一樣的名稱</p></span>
+              <span><p>在大多數情況下，我們會把跨函數或是需要外部設定的參數設成全域變數，而一次性使用的參數則會設成全域變數</p></span>
+              <span><p>例如：支撐、壓力、指標週期會是全域變數，而控制迴圈的參數則會設成區域變數</p></span>
+              <span><p>講解完基本概念後，接下來我們要正式進入EA的撰寫了<br/><br/></p></span>
+              
+
+              <blockquote>
+              <ul>
+                <li>double Ask,Bid;</li>
+                <li></li>
+                <li></li>
+
+                <li></li>
+                <li></li>
+                <li>double Open[],High[];</li>
+                <li>double Low[],Close[];</li>
+                <li>int OnInit()</li>                
+                <li>{</li>
+                <li></li>
+                <li>ArraySetAsSeries(Open,true);</li>
+                <li>ArraySetAsSeries(High,true);</li>
+                <li>ArraySetAsSeries(Low,true);</li>
+                <li>ArraySetAsSeries(Close,true);</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                
+                <li>//---</li>                   
+                <li>//---</li>
+                <li>   return(INIT_SUCCEEDED);</li>
+                <li>  }</li>
+              </ul>
+              </blockquote>
+              <span><p>在上述的範例中我們宣告六個全域變數，這些變數如其名是用來儲存個個價位的</p></span>
+              <span><p></p></span>
+              <span><p></p></span>              
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>              
+              <span><p></p></span>
+              <span><p></p></span>
+              
+
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>              
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>
+              <span><p></p></span>              
+              <span><p></p></span>
+              <span><p></p></span>
+
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                     */
+                    
+                    var disqus_config = function () {
+                        this.page.url = "https://abc";  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "abc"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    
+                    (function() {  
+                        var d = document, s = d.createElement('script');
+                        
+                        s.src = 'https://prgramingnote.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                                 
+                <script id="dsq-count-scr" src="//prgramingnote.disqus.com/count.js" async></script>
+
+            </div>
+          </div>
+        </div>
+        </div>
+
+        </main>
+		</body>
+	</html>

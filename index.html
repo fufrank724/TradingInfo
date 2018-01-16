@@ -1,0 +1,426 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/main.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <title>程式學習筆記</title>
+      <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+      <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript" language="javascript">
+        function videochange(id) {
+          document.getElementById("player").innerHTML = videopanel(id);   
+        }
+
+        function videopanel(id) {
+        
+           str = '<iframe width="100%" height="350" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>';
+           return str;        
+        }
+        var x=document.getElementById("demo");
+        function getLocation()
+          {
+          if (navigator.geolocation)
+            {
+            navigator.geolocation.getCurrentPosition(showPosition);
+            }
+          else{x.innerHTML="Geolocation is not supported by this browser.";}
+          }
+        function showPosition(position)
+          {
+          x.innerHTML="Latitude: " + position.coords.latitude +
+          "<br />Longitude: " + position.coords.longitude;
+          }         
+
+        </script>
+     <style>
+         #slider {
+           width: 100%; position: relative; 
+
+         }
+        .modal.open{
+            width: 60%;
+            max-height: 97%;
+            height: 97%;
+
+        }
+        .container {
+          margin: 0 auto;
+          max-width: 80%;
+          width: 80%;
+        }
+        main{
+        font-family: "Microsoft JhengHei", sans serif;
+        padding-left: 0px;
+        }
+
+    </style>
+     
+     <script>
+       $(document).ready(function(){
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal({
+                  dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                  startingTop: '100%', // Starting top style attribute
+                  endingTop: '1%', // Ending top style attribute  
+
+                });
+          });
+     </script>
+    <main>
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="mql5_menu.html">MQL5 教學</a></li>
+          <li><a href="ml_menu.html">機器學習演算法</a></li>
+          <li><a href="paper_menu.html">專案研究</a></li>
+        </ul>
+
+        <div class="navbar-fixed">
+
+        <nav class = "blue lighten-1">
+
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center">AlgoTrading Note</a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="">Home</a></li>
+              <li><a href="#auther">關於作者</a></li>
+              <!-- Dropdown Trigger -->
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">功能表<i class="material-icons right">arrow_drop_down</i></a></li>
+              
+            </ul>
+
+          <div class="container "><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+
+
+          </div>
+          
+          <script>         
+            $('.dropdown-button').dropdown({
+              inDuration: 300,
+              outDuration: 225,
+              constrainWidth: true, // Does not change width of dropdown to that of the activator
+              hover: true, // Activate on hover
+              gutter: 0, // Spacing from edge
+              belowOrigin: true, // Displays dropdown below the button
+              alignment: 'left', // Displays dropdown with edge aligned to the left of button
+              stopPropagation: true // Stops event propagation
+            }
+          );
+          </script>
+        </nav>
+        </div>
+        <ul id="nav-mobile" class="side-nav">
+		   <li>
+             <div class="userView">
+		     <div class="background">
+             
+		       <img src="https://images.pexels.com/photos/744485/pexels-photo-744485.jpeg">
+             
+		     </div>
+             
+		     <img class="circle" src="img/mentori.jpg">
+             
+		     <span class="white-text name">程式交易資訊站</span>
+		     <span class="white-text email">fufrank724@gmail.com</span>
+             </div>
+           </li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal" href="index.html">首頁</a></li>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal" href= "#auther">關於作者</a></li>
+
+                
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">功能表</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a class="waves-effect waves-teal" href = "mql5_menu.html">MQL5學習筆記</a></li>
+                      <li><a class="waves-effect waves-teal" href = "ml_menu.html">機器學習演算法</a></li>
+                      <li><a class="waves-effect waves-teal">專案研究</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+              </ul>
+            </li>
+           
+		 </ul>
+   
+
+        <script>$('.carousel.carousel-slider').carousel({fullWidth: true});
+                $(document).ready(function(){$('.slider').slider();});</script>
+          <div id ="slider" class="slider">
+            
+             <ul class="slides">               
+               <li>
+                 <img src="img/research-papers.jpg"> <
+                 <div class="caption right-align">
+                   
+                 </div>
+               </li>
+               <li>
+                 <img src="img/machine_learning.jpeg"> <!-- random image -->
+                 <div class="caption left-align">
+                   <h3></h3>
+                   <!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+                   
+                 </div>
+                 
+               </li>
+
+               <li>
+                 <img src="img/algo_Trade.jpg"> <
+                 <div class="caption right-align">
+                   
+                 </div>
+               </li>
+
+             </ul>
+             
+         </div>
+
+           <!-----------------cards----------------->
+           <div class="section white">
+             <div class="row container">
+                  <!-----------------card1----------------->
+                  
+                  
+                  <div class="col s12 m4">
+                  
+                  <h4 class="center-align"> MQL5學習筆記 </h4>
+                  <div class="divider"></div>
+                  <div class="card hoverable"><a href="#modal1">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="img/logo_mql5.jpg">
+                    </div>
+                    <div class="card-content center-align">
+                      <span class="card-title activator grey-text text-darken-4">MQL5 Learning Note</span>
+                    </div>
+
+                  </a>
+                  </div>
+                   <ul class="collapsible " data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">laptop_chromebook</i>MQL5 基本語法</div>
+                          <div class="collapsible-body"><p>MQL5 常用語法簡介
+
+                          </p></div>
+                          
+                        </li>
+                        <li>
+                          <div class="collapsible-header" ><i class="material-icons">class</i>EA開發筆記</div>
+                          <div class="collapsible-body">
+                                <p>EA快速開發<br/>
+                                    投資組合檢視<br/></p>
+
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">import_contacts</i>程式交易觀念筆記</div>
+                          <div class="collapsible-body">
+                            <p>回測陷阱<br/>
+                                風險管理<br/>
+                                策略穩定性測試<br/>
+                     
+                          </p></div>
+                        </li>
+                    </ul>
+
+                  </div>
+                  <!-----------------card2----------------->
+                  
+                  <div class="col s12 m4">
+                  
+                  <h4 class="center-align" > 機器學習演算法 </h4>
+                  <div class="divider"></div>
+                  <div class="card hoverable"><a href="#modal2">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="img/machine_learning2.jpg">
+                    </div>
+                    <div class="card-content center-align">
+                      <span class="card-title activator grey-text text-darken-4">Machine Learning Algorithm</span>
+                    </div>
+
+                  </a>
+                  </div>
+                   <ul class="collapsible " data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>機器學習演算法簡介</div>
+                          <div class="collapsible-body">
+                            <p>各類型機器學習演算法簡介：<br /> 
+                                Clustering,<br />
+                                Information Base,<br />
+                                Error Base<br /></p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">class</i>深度學習</div>
+                          <div class="collapsible-body">
+                            <p>台大李宏毅教授機器學習課程整理<br /> 
+                                主要內容：<br/>
+                                Neural Network<br/>
+                                Convolution Neural Network<br />
+                                Recurssive Neural Network<br /></p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">import_contacts</i>強化學習</div>
+                          <div class="collapsible-body">
+                            <p>強化學習演算法(Deep Learning)簡介<br /> 
+                                Q-Learning<br />
+                                Policy Gradient<br />
+                                Asynchronous Advantage Actor-Critic(A3C)<br /></p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">build</i>機器學習實作</div>
+                          <div class="collapsible-body">
+                            <p>機器學習演算法於現實生活中應用實例</p>
+                          </div>
+                        </li>
+                    </ul>
+                  </div>  
+
+                  <!-----------------card3----------------->
+                  
+                  <div class="col s12 m4">
+                  
+                  <h4 class="center-align"> 專案研究 </h4>
+                  <div class="divider"></div>
+                  <div class="card hoverable"><a href="#modal3">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="img/Research.jpg">
+                    </div>
+                    <div class="card-content center-align">
+                      <span class="card-title activator grey-text text-darken-4">Paper Research</span>
+                    </div>
+
+                  </a>
+                  </div>
+
+                   <ul class="collapsible " data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>論文探討</div>
+                          <div class="collapsible-body">
+                            <p>近期研讀的論文.</p>
+                            
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">class</i>Github專案研究</div>
+                          <div class="collapsible-body">
+                            <p>Github上的專案討論與研究</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">import_contacts</i>Kaggle專案探討</div>
+                          <div class="collapsible-body">
+                            <p>近期Kaggle專案研究</p>
+                          </div>
+                        </li>
+
+                    </ul>
+                  </div>
+
+                  
+                  
+             </div>
+           </div>
+    
+          <footer class = "page-footer" id = "auther">
+             <div class = "row">
+             
+                <div class = "col s12 m6 l6">
+                    <h5 class = "white-text">關於作者</h5>
+                    <span><p>作者就讀資工系，目前鑽研程式交易。<br/>               
+                    除了常見的條件式演算法交易外，作者也會在開發策略之餘研發一些特別的演算法交易，例如機器學習演算法、運用演算法進行策略管理等。</p></span>
+
+                    
+                    <span><p>
+                    若想交流歡迎私訊粉專或是在文章下面留言，希望大家都能透過本站學到新的知識。
+                    </p></span>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2FAlgoTradingInfo%2Fabout%2F%3Fref%3Dpage_internal&tabs=timeline&width=340&height=162&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="340" height="162" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </div>
+                <div class = "col s12 m6 l6">
+                   <h5 class = "white-text">外匯保證金帳戶損益</h5>
+                <a href="https://www.myfxbook.com/statements/2377069/statement.html"><img  border="0" src="https://widgets.myfxbook.com/widgets/2377069/medium.jpg"/></a>
+                
+                </div>
+                
+
+
+             </div>
+             
+             <div class = "footer-copyright">
+                <div class = "container">
+                   © 2016 Copyright Information
+
+                </div>
+             </div>
+           </footer>
+
+        <div id="modal1" class="modal">
+          <div class="modal-content center-align">
+            <h3 >MQL5學習筆記</h3>
+            <img src="img/logo_mql5.jpg" width="50%" height="50%">
+            <p class = "flow-text">
+            本系列文章將介紹MQL5的語法以及程式交易常遇到的問題與陷阱。<br/>
+            希望藉此系列文章能使更多人認識並學會程式交易。
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="mql5_menu.html" class=" modal-action modal-close waves-effect waves-green btn-flat">前去了解</a>
+           </div>
+        </div>
+        <div id="modal2" class="modal">
+          <div class="modal-content center-align">
+            <h3 >機器學習演算法</h3>
+            <img src="img/machine_learning2.jpg" width="70%" height="70%">
+            <p class = "flow-text">
+            本系列文章將介紹三種不同領域的機器學習演算法：<br/>
+            Similarity Base、Information Base、Error Base<br/>
+            前兩者基於中興大學資工系范耀中老師開的高等資料探勘<br/>
+            後者則基於台大李宏毅老師開的機器學習課程內容做延伸。<br/>
+            另外也會介紹近年火紅的強化學習(Reinforcement Learning)與其實作<br/>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="ml_menu.html" class=" modal-action modal-close waves-effect waves-green btn-flat">前去了解</a>
+           </div>
+        </div>
+        <div id="modal3" class="modal">
+          <div class="modal-content center-align">
+            <h3 >專案研究</h3>
+            <img src="img/Research.jpg" width="60%" height="60%">
+            <p class = "flow-text">
+            紀錄近期閱讀的論文以及Github或Kaggle專案研究
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="paper_menu.html" class="modal-action modal-close waves-effect waves-green btn-flat">前去了解</a>
+           </div>
+        </div>        
+    
+    
+    
+    </main>
+
+    </body>
+
+  </html>

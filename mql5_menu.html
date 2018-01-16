@@ -1,0 +1,356 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/main.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <title>MQL5學習筆記</title>
+      <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+      <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript" language="javascript">
+        function videochange(id) {
+          document.getElementById("player").innerHTML = videopanel(id);   
+        }
+
+        function videopanel(id) {
+        
+           str = '<iframe width="100%" height="350" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>';
+           return str;        
+        }
+        var x=document.getElementById("demo");
+        function getLocation()
+          {
+          if (navigator.geolocation)
+            {
+            navigator.geolocation.getCurrentPosition(showPosition);
+            }
+          else{x.innerHTML="Geolocation is not supported by this browser.";}
+          }
+        function showPosition(position)
+          {
+          x.innerHTML="Latitude: " + position.coords.latitude +
+          "<br />Longitude: " + position.coords.longitude;
+          }         
+
+        </script>
+     <style>
+         #slider {
+           width: 100%; position: relative; 
+
+         }
+        .modal.open{
+            width: 60%;
+            max-height: 97%;
+            height: 97%;
+
+        }
+        .container {
+          margin: 0 auto;
+          max-width: 80%;
+          width: 80%;
+        }
+        main{
+        font-family: "Microsoft JhengHei", sans serif;
+        padding-left: 0px;
+        }
+
+    </style>
+    
+
+     <script>
+       $(document).ready(function(){
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal({
+                  dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                  startingTop: '100%', // Starting top style attribute
+                  endingTop: '1%', // Ending top style attribute  
+
+                });
+          });
+     </script>
+    <main>
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="">MQL5 教學</a></li>
+          <li><a href="ml_menu.html">機器學習演算法</a></li>
+          <li><a href="paper_menu.html">專案研究</a></li>
+          <li><a href="mql5_order.html">MQL5委託代寫</a></li>
+        </ul>
+        <div class="navbar-fixed">
+        <nav class = "grey lighten-1">
+          <div class="nav-wrapper">
+            <a href="" class="brand-logo center">MQL5 Note</a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#auther">關於作者</a></li>
+              
+              <!-- Dropdown Trigger -->
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">功能表<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+          <script>         
+            $('.dropdown-button').dropdown({
+              inDuration: 300,
+              outDuration: 225,
+              constrainWidth: true, // Does not change width of dropdown to that of the activator
+              hover: true, // Activate on hover
+              gutter: 0, // Spacing from edge
+              belowOrigin: true, // Displays dropdown below the button
+              alignment: 'left', // Displays dropdown with edge aligned to the left of button
+              stopPropagation: true // Stops event propagation
+            }
+          );
+          </script>
+
+        </nav>
+        </div>
+
+
+        <script>$('.carousel.carousel-slider').carousel({fullWidth: true});
+                $(document).ready(function(){$('.slider').slider();});</script>
+          <div id ="slider" class="slider">
+            
+             <ul class="slides">               
+
+               <li>
+                 <img src="img/algo_Trade.jpg"> <!-- random image -->
+                 <div class="caption left-align">
+                   <h3></h3>
+                   <!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+                   
+                 </div>
+                 
+               </li>
+
+
+             </ul>
+             
+         </div>
+  
+           <!-----------------cards----------------->
+           <div class="section white">
+             <div class="row container">
+
+                  <!-----------------card1----------------->
+                  
+                  <div class="col s12 m4">
+                  
+                  <h4 class="center-align"> MQL5 基本語法 </h4>
+                      <div class="divider"></div>
+                      <div class="card hoverable"><a href="#modal1">
+                        <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="img/mql52.jpg">
+                        </div>
+                        <div class="card-content center-align">
+                          <span class="card-title activator grey-text text-darken-4">MQL5 Basic</span>
+                        </div></a>
+                      </div>
+                       <ul class="collapsible " data-collapsible="accordion">
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">laptop_chromebook</i>MQL5基本語法</div>
+                              <div class="collapsible-body"><p>幫大家整理了一些能夠快速上手且免費的MQL5線上資源
+                                <a class="btn-flat waves-effect waves-light right"  name="btn_basic" href = "mql5_basic.html">前去了解
+                                    <i class="material-icons right">send</i></a>
+                              </p></div>
+                              
+                            </li>
+                            <li>
+                              <div class="collapsible-header" ><i class="material-icons">class</i>EA架構講解</div>
+                              <div class="collapsible-body">
+                                    <p>EA的常見架構講解以及實例<br/>
+
+                              </p></div>
+                            </li>
+
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">import_contacts</i>常用的函數與語法</div>
+                              <div class="collapsible-body">
+                                <p>在交易上常用到的函數與其原理</p>
+                  
+                              </div>
+                            </li>
+                        </ul>
+                  </div>
+                  <!-----------------card2----------------->
+                  
+                  <div class="col s12 m4">
+                  
+                  <h4 class="center-align" > EA開發筆記 </h4>
+                  <div class="divider"></div>
+                  <div class="card hoverable"><a href="#modal2">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="img/note.jpg">
+                    </div>
+                    <div class="card-content center-align">
+                      <span class="card-title activator grey-text text-darken-4">EA Develop Note</span>
+                    </div>
+
+                  </a>
+                  </div>
+                   <ul class="collapsible " data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>手單懶人包</div>
+                          <div class="collapsible-body">
+                            <p>如何用熱鍵下單，同時設定好停損停利</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">class</i>懶人開發法</div>
+                          <div class="collapsible-body">
+                            <p>如何快速開發一個商品的粗胚</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">import_contacts</i>模糊理論應用與實作</div>
+                          <div class="collapsible-body">
+                            <p>模糊理論如何應用在策略上</p>
+                          </div>
+                        </li>
+
+                    </ul>
+                  </div>  
+
+                  <!-----------------card3----------------->
+                  
+                  <div class="col s12 m4">
+                  
+                  <h4 class="center-align"> 程式交易觀念 </h4>
+                  <div class="divider"></div>
+                  <div class="card hoverable"><a href="#modal3">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="img/idea.jpg">
+                    </div>
+                    <div class="card-content center-align">
+                      <span class="card-title activator grey-text text-darken-4">AlgoTrading Concept</span>
+                    </div>
+
+                  </a>
+                  </div>
+
+                   <ul class="collapsible " data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>歷史資料與時區</div>
+                          <div class="collapsible-body">
+                            <p>歷史資料品質與時差會如何影響到回測績效</p>
+                            </button>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">class</i>風險管理</div>
+                          <div class="collapsible-body">
+                            <p>如何檢視自己的部位風險</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>策略穩定性測試</div>                          
+                          <div class="collapsible-body">
+                            <p>運用Walk Forward Test 檢視策略的穩定性</p>
+                          </div>
+                        </li>
+
+                    </ul>
+                  </div>
+             </div>
+           </div>
+    
+        <div id="modal1" class="modal">
+          <div class="modal-content ">
+            <h3 class="center-align">MQL5基本語法</h3>
+            <p class="center-align"><img src="img/mql52.jpg" width="50%" height="50%" ></p>
+            <p class = "flow-text">
+            筆者MQL4語法學自<a href="https://histock.tw/school/cash.html">Beequant</a><br/>
+            由於MQL4與MQL5語法相近，因此學習MQL5的速度相當快。<br/>
+            本系列文章將紀錄MQL5基本與常見語法，希望能幫助更多有興趣的人入門。
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">確定</a>
+          </div>
+        </div>
+        
+        <div id="modal2" class="modal">
+          <div class="modal-content ">
+            <h3 class="center-align">EA開發筆記</h3>
+            <p class="center-align"><img src="img/note.jpg" width="70%" height="80%" >
+            <p class = "flow-text">
+            分享一些自己寫的簡單EA以及在MT5論壇上的文章實作<br/>           
+  
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">確定</a>
+          </div>
+        </div>
+        
+        <div id="modal3" class="modal">
+          <div class="modal-content ">
+            <h3 class="center-align">程式交易觀念</h3>
+            <p class="center-align"><img src="img/idea.jpg" width="50%" height="50%" ></p>
+            <p class = "flow-text">
+            紀錄一下前輩們分享的一些程式交易觀念以及在MT5上常見的陷阱<br/>
+
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">確定</a>
+          </div>
+        </div>      
+    </main>
+    
+      <footer class = "page-footer" id = "auther">
+         <div class = "row">
+         
+            <div class = "col s12 m6 l6">
+                <h5 class = "white-text">關於作者</h5>
+                <span><p>作者就讀資工系，目前鑽研程式交易。<br/>               
+                除了常見的條件式演算法交易外，作者也會在開發策略之餘研發一些特別的演算法交易，例如機器學習演算法、運用演算法進行策略管理等。</p></span>
+                <span><p>
+                作者MQL5以及外匯保證金交易師承自<a href="https://histock.tw/school/cash.html">Beequant</a>。<br/>除了MQL5外，也會一點點的Multicharts語法，另外資工必備的Python、Java、C++也都會一點。
+                在實驗上為了方便起見主要還是以Python開發為主。
+                </p></span>
+                
+                <span><p>
+                若想交流歡迎私訊粉專或是在文章下面留言，希望大家都能透過本站學到一些程式交易技巧。
+                </p></span>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2FAlgoTradingInfo%2Fabout%2F%3Fref%3Dpage_internal&tabs=timeline&width=340&height=162&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="340" height="162" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+            <div class = "col s12 m6 l6">
+               <h5 class = "white-text">外匯保證金帳戶損益</h5>
+            <a href="https://www.myfxbook.com/statements/2377069/statement.html"><img  border="0" src="https://widgets.myfxbook.com/widgets/2377069/medium.jpg"/></a>
+            
+            </div>
+            
+
+
+         </div>
+         
+         <div class = "footer-copyright">
+            <div class = "container">
+               © 2016 Copyright Information
+               <a class = "grey-text text-lighten-4 right" href = "#!">Links</a>
+            </div>
+         </div>
+       </footer>
+                 
+
+
+    </body>
+
+  </html>

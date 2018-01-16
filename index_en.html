@@ -1,0 +1,332 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/main.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <title>程式交易資訊站</title>
+      <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+      <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+      <style>
+         #slider {
+           width: 100%; position: relative; 
+         }
+      </style>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript" language="javascript">
+        function videochange(id) {
+          document.getElementById("player").innerHTML = videopanel(id);   
+        }
+
+        function videopanel(id) {
+        
+           str = '<iframe width="100%" height="350" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>';
+           return str;        
+        }
+        var x=document.getElementById("demo");
+        function getLocation()
+          {
+          if (navigator.geolocation)
+            {
+            navigator.geolocation.getCurrentPosition(showPosition);
+            }
+          else{x.innerHTML="Geolocation is not supported by this browser.";}
+          }
+        function showPosition(position)
+          {
+          x.innerHTML="Latitude: " + position.coords.latitude +
+          "<br />Longitude: " + position.coords.longitude;
+          }         
+
+        </script>
+     <style>
+        .modal.open{
+            width: 60%;
+            max-height: 97%;
+            height: 97%;
+
+        }
+        .container {
+          margin: 0 auto;
+          max-width: 80%;
+          width: 80%;
+        }
+    </style>
+
+
+     
+     <script>
+       $(document).ready(function(){
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal({
+                  dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                  startingTop: '100%', // Starting top style attribute
+                  endingTop: '1%', // Ending top style attribute  
+
+                });
+          });
+     </script>
+
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="#!">MQL5 教學</a></li>
+          <li><a href="#!">機器學習演算法</a></li>
+          <li><a href="#!">交易觀念</a></li>
+        </ul>
+        <div class="navbar-fixed">
+        <nav class = "blue lighten-1">
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center">AlgoTrading</a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#">Sass</a></li>
+              <li><a href="#">Components</a></li>
+              <!-- Dropdown Trigger -->
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">DashBoard<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+          <script>         
+            $('.dropdown-button').dropdown({
+              inDuration: 300,
+              outDuration: 225,
+              constrainWidth: true, // Does not change width of dropdown to that of the activator
+              hover: true, // Activate on hover
+              gutter: 0, // Spacing from edge
+              belowOrigin: true, // Displays dropdown below the button
+              alignment: 'left', // Displays dropdown with edge aligned to the left of button
+              stopPropagation: true // Stops event propagation
+            }
+          );
+          </script>
+        </nav>
+        </div>
+
+
+        <script>$('.carousel.carousel-slider').carousel({fullWidth: true});
+                $(document).ready(function(){$('.slider').slider();});</script>
+          <div id ="slider" class="slider">
+            
+             <ul class="slides">               
+             
+               <li>
+                 <img src="img/machine_learning.jpeg"> <!-- random image -->
+                 <div class="caption left-align">
+                   <h3></h3>
+                   <!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+                   
+                 </div>
+                 
+               </li>
+
+               <li>
+                 <img src="img/algo_Trade.jpg"> <
+                 <div class="caption right-align">
+                   
+                 </div>
+               </li>
+
+             </ul>
+             
+         </div>
+
+           <!-----------------cards----------------->
+           <div class="section white">
+             <div class="row container">
+                  <!-----------------card1----------------->
+                  
+                  
+                  <div class="col s4">
+                  
+                  <h4 class="center-align"> MQL5 教學 </h4>
+                  <div class="divider"></div>
+                  <div class="card hoverable"><a href="#modal1">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="img/logo_mql5.jpg">
+                    </div>
+                    <div class="card-content center-align">
+                      <span class="card-title activator grey-text text-darken-4">MQL5 教學</span>
+                    </div>
+
+                  </a>
+                  </div>
+                   <ul class="collapsible " data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">laptop_chromebook</i>MQL5 基本語法</div>
+                          <div class="collapsible-body"><p>MQL5 常用語法簡介
+                            <button class="btn-flat waves-effect waves-light right" name="action">前去了解
+                                <i class="material-icons right">send</i>
+                          </p></div>
+                          
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">class</i>開發經驗</div>
+                          <div class="collapsible-body"><p>如何快速開發你的EA
+                            <button class="btn-flat waves-effect waves-light right"  name="action">前去了解
+                                <i class="material-icons right">send</i>
+                          </p></div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">import_contacts</i>程式交易觀念</div>
+                          <div class="collapsible-body"><p>在交易前你該要注意的事
+                            <button class="btn-flat waves-effect waves-light right"  name="action">前去了解
+                                <i class="material-icons right">send</i>                          
+                          </p></div>
+                        </li>
+                    </ul>
+
+
+                  
+                  </div>
+                  <!-----------------card2----------------->
+                  
+                  <div class="col s4">
+                  
+                  <h4 class="center-align"> Machine Learning Basic </h4>
+                  <div class="divider"></div>
+                  <div class="card hoverable"><a href="#modal1">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="img/logo_mql5.jpg">
+                    </div>
+                    <div class="card-content center-align">
+                      <span class="card-title activator grey-text text-darken-4">Machine Learning Algorithm</span>
+                    </div>
+
+                  </a>
+                  </div>
+                   <ul class="collapsible " data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>Intro of Machine Learning</div>
+                          <div class="collapsible-body">
+                            <p>Introdoction of Decesion tree,<br /> 
+                                Linear Regression,<br />
+                                Gradient Descent<br />
+                                and Logistic Regression.<br /></p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">class</i>Deep Learning</div>
+                          <div class="collapsible-body">
+                            <p>Introdoction of Neural Network<br /> 
+                                Convolution Neural Network,<br />
+                                and Recurssive Neural Network<br /></p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">import_contacts</i>Reinforcement Learning</div>
+                          <div class="collapsible-body">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">build</i>Implementation of Machine Learning</div>
+                          <div class="collapsible-body">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                          </div>
+                        </li>
+                    </ul>
+                  </div>  
+
+                  <!-----------------card3----------------->
+                  
+                  <div class="col s4">
+                  
+                  <h4 class="center-align"> Paper Research </h4>
+                  <div class="divider"></div>
+                  <div class="card hoverable"><a href="#modal1">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="img/logo_mql5.jpg">
+                    </div>
+                    <div class="card-content center-align">
+                      <span class="card-title activator grey-text text-darken-4">Paper Research</span>
+                    </div>
+
+                  </a>
+                  </div>
+
+                   <ul class="collapsible " data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">layers</i>Intro of Machine Learning</div>
+                          <div class="collapsible-body">
+                            <p>Lorem ipsum dolor sit amet.
+                            </p>
+                            </button>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">class</i>Deep Learning</div>
+                          <div class="collapsible-body">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">import_contacts</i>Reinforcement Learning</div>
+                          <div class="collapsible-body">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">build</i>Implementation of Machine Learning</div>
+                          <div class="collapsible-body">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                          </div>
+                        </li>
+                    </ul>
+                  </div>
+
+                  
+                  
+             </div>
+           </div>
+          
+        <div id="modal1" class="modal">
+          <div class="modal-content center-align">
+            <h3 >MQL5 introdoction</h3>
+            <img src="img/boxes-1834416.jpg" width="50%" height="50%">
+            <p class = "flow-text">Hello</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+           </div>
+        </div>
+        <div id="modal2" class="modal">
+          <div class="modal-content center-align">
+            <h3 >MQL5 introdoction</h3>
+            <img src="img/boxes-1834416.jpg" width="50%" height="50%">
+            <p class = "flow-text">Hello</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+           </div>
+        </div>
+        <div id="modal3" class="modal">
+          <div class="modal-content center-align">
+            <h3 >PaperResearch</h3>
+            <img src="img/boxes-1834416.jpg" width="50%" height="50%">
+            <p class = "flow-text">Hello</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+           </div>
+        </div>        
+          
+    
+                 
+
+
+    </body>
+
+  </html>

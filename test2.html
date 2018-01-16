@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+function formresponse() {
+	var m = document.forms["form1"]["meal"].value;
+	var d = document.forms["form1"]["drink"].value;
+    var c = document.forms["form1"]["ccc"].value;
+    if (m==null || m=="")
+    {
+      alert("LineID不可為空白!");
+      return false;
+    }
+    else if (d==null || d=="")
+    {
+      alert("Email不可為空白!");
+      return false;
+    }
+    else if (c==null || c=="")
+    {
+      alert("委託內容不可為空白!");
+      return false;
+    }
+	else
+	   {
+        var MySubmit = "https://docs.google.com/forms/d/e/1FAIpQLSct1D3v7Ky-AJ45hQ0YkwDNOb-8GEY8WHFcXjZlj81SLcH6Mg/formResponse?entry.735384546=" + m + "&entry.949277366=" + d + "&entry.571249634=" + c + "&submit=Submit";
+		$("#formresponse").html(unescape("%3Cscript type='text/javascript' src='" + MySubmit + "'%3E%3C/script%3E"));
+		alert("你訂的" + m + "及" + d + "已送單");
+	   }
+}
+</script>
+</head>
+<body>
+	<span id="formresponse"></span>
+	<form name="form1" action="javascript:formresponse();">
+		<div data-role="fieldcontain">
+			<label for="name">便當:</label><input type="text" name="meal">
+		</div>
+		<div data-role="fieldcontain">
+			<label for="name">飲料:</label><input type="text" name="drink">
+		</div>
+		<div data-role="fieldcontain">
+			<label for="name">飲料:</label><input type="text" name="ccc">
+		</div>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
